@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Predictor</title>
+</head>
+
+<body>
+
+    <h1>House Price Predictor</h1>
+
+    <label>Rooms:</label>
+    <input id="rooms" type="number">
+
+    <br><br>
+
+    <label>Age:</label>
+    <input id="age" type="number">
+
+    <br><br>
+
+    <label>Distance:</label>
+    <input id="distance" type="number">
+
+    <br><br>
+
+    <button onclick="predictPrice()">Predict</button>
+
+    <h2 id="result"></h2>
+
+    <script>
+        async function predictPrice() {
+
+            const rooms = Number(document.getElementById("rooms").value);
+            const age = Number(document.getElementById("age").value);
+            const distance = Number(document.getElementById("distance").value);
+
+            const response = await fetch("http://127.0.0.1:8000/predict", {
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify({
+                    rooms: rooms,
+                    age: age,
+                    distance: distance
+                })
+            });
+
+            const result = await response.json();
+
+            document.getElementById("result").innerText =
+                "Predicted price: $" + result["predicted price"];
+        }
+    </script>
+
+</body>
+</html>

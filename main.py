@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 import joblib
+from fastapi.responses import FileResponse
 
 app = FastAPI(title="House Price Prediction API")
 
@@ -25,3 +26,7 @@ def predict_price(data:HouseInput):
     return {
         "predicted price": round(prediction[0],2)
     }
+
+@app.get("/")
+def home():
+    return FileResponse("index.html")
