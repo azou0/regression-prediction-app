@@ -1,0 +1,4 @@
+Script started on Thu Sep 10 19:30:24 2026
+[1m[7m%[27m[1m[0m                                                                                            [0m[27m[24m[J(base) anezu@Annies-MacBook-Pro First-Model-Deployment-FastAPI % [K[?2004h[7mexit[27m[27me[27mx[27mi[27mt[?2004l
+
+Script done on Thu Sep 10 19:31:49 2026

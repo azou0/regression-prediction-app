@@ -1,0 +1,16 @@
+ 1045  /opt/homebrew/bin/python3 /Users/anezu/Desktop/projects_for_practice/First-Model-Deployment-FastAPI/train_model.py
+ 1046  python -m pip install pandas scikit-learn joblib
+ 1047  which python\nwhich python3
+ 1048  python --version\npython3 --version
+ 1049  python -c "import pandas; print(pandas.__version__)"
+ 1050  which python\nwhich python3\npython -c "import sys; print(sys.executable)"
+ 1051   python train_model.py
+ 1052  jupytext --to notebook train_model.py
+ 1053  pip install jupytext
+ 1054  jupytext --to notebook train_model.py
+ 1055  python train_model.ipynb
+ 1056  git status
+ 1057  git add .
+ 1058  git commit -m"finished model training"
+ 1059  touch main.py
+ 1060  script terminal_session.txt
