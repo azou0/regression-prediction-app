@@ -34,5 +34,6 @@ build/
 dist/
 *.egg-info/
 
-# Terminal recordings
+# Terminal recordings and command history
 terminal_session.txt
+terminal_commands.txt
